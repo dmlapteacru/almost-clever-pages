@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official pages and privacy policies for Almost Clever Games.">
+  <title>Almost Clever Games</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #100923;
+      --panel: #1b1137;
+      --panel-2: #25164a;
+      --text: #f6f2ff;
+      --muted: #bcb2d4;
+      --accent: #a888ff;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #261552 0, var(--bg) 48%);
+      color: var(--text);
+    }
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0 48px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(2.6rem, 8vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    .intro {
+      max-width: 650px;
+      margin: 24px 0 42px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(145deg, var(--panel-2), var(--panel));
+    }
+    .card h2 { margin: 0 0 10px; font-size: 1.35rem; }
+    .card p { margin: 0 0 20px; color: var(--muted); line-height: 1.6; }
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 17px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #160d2e;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    a.button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+    footer {
+      margin-top: 54px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    footer a { color: var(--text); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Almost Clever Games</p>
+    <h1>Small games.<br>Almost clever.</h1>
+    <p class="intro">Official public pages, support information, and privacy policies for games published by Almost Clever Games.</p>
+
+    <section class="grid" aria-label="Games">
+      <article class="card">
+        <h2>Merge Orbit</h2>
+        <p>An offline endless one-tap orbital merge puzzle for Android.</p>
+        <a class="button" href="merge-orbit/privacy-policy.html">Privacy Policy</a>
+      </article>
+    </section>
+
+    <footer>
+      <div>Support: <a href="mailto:lector3run@gmail.com">lector3run@gmail.com</a></div>
+      <div>Copyright © 2026 Almost Clever Games. All rights reserved.</div>
+    </footer>
+  </main>
+</body>
+</html>
