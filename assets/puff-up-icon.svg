@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Puff Up icon</title>
+  <desc id="desc">A cheerful green puff floating through a colorful hoop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#8a6cff"/>
+      <stop offset="0.55" stop-color="#7a5cfa"/>
+      <stop offset="1" stop-color="#5142c7"/>
+    </linearGradient>
+    <radialGradient id="body" cx="42%" cy="32%">
+      <stop stop-color="#bdf59a"/>
+      <stop offset="0.58" stop-color="#78e66d"/>
+      <stop offset="1" stop-color="#2d9c55"/>
+    </radialGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#d6ffb7"/>
+      <stop offset="1" stop-color="#99e77d"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b26cff"/>
+      <stop offset="1" stop-color="#ff5fa2"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="17" stdDeviation="13" flood-color="#211044" flood-opacity="0.45"/>
+    </filter>
+    <mask id="hole">
+      <rect width="512" height="512" fill="#fff"/>
+      <ellipse cx="256" cy="353" rx="158" ry="42" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <path d="M-30 153C35 110 84 126 121 166c40-40 113-35 137 23-82 18-178 20-288 4z" fill="#fff" opacity="0.18"/>
+  <path d="M328 38c44-22 99-4 115 31 37-9 77 13 85 47-66 12-138 9-203-7z" fill="#fff" opacity="0.14"/>
+  <g fill="#fff2a8"><circle cx="88" cy="104" r="5"/><circle cx="454" cy="186" r="4"/></g>
+  <circle cx="432" cy="88" r="7" fill="#fff" opacity="0.7"/>
+  <g transform="rotate(-7 256 353)" filter="url(#shadow)">
+    <ellipse cx="256" cy="353" rx="218" ry="78" fill="url(#ring)" mask="url(#hole)"/>
+    <ellipse cx="256" cy="334" rx="184" ry="51" fill="none" stroke="#fff" stroke-opacity="0.32" stroke-width="9"/>
+  </g>
+  <g transform="translate(72 22) scale(.72)" filter="url(#shadow)">
+    <polygon points="256,76 281.7,98 312.9,85 330.5,113.9 364.2,111.1 372,144 404.9,151.8 402.1,185.5 431,203.1 418,234.3 440,260 418,285.7 431,316.9 402.1,334.5 404.9,368.2 372,376 364.2,408.9 330.5,406.1 312.9,435 281.7,422 256,444 230.3,422 199.1,435 181.5,406.1 147.8,408.9 140,376 107.1,368.2 109.9,334.5 81,316.9 94,285.7 72,260 94,234.3 81,203.1 109.9,185.5 107.1,151.8 140,144 147.8,111.1 181.5,113.9 199.1,85 230.3,98" fill="url(#body)" stroke="#213b45" stroke-width="12" stroke-linejoin="round"/>
+    <ellipse cx="256" cy="315" rx="105" ry="82" fill="url(#belly)" opacity="0.82"/>
+    <path d="M105 280Q63 300 78 347q38-18 54-47" fill="#69d863" stroke="#213b45" stroke-width="10"/>
+    <path d="M407 280q42 20 27 67-38-18-54-47" fill="#69d863" stroke="#213b45" stroke-width="10"/>
+    <path d="M176 224q29-34 58 0M278 224q29-34 58 0" fill="none" stroke="#213b45" stroke-width="15" stroke-linecap="round"/>
+    <path d="M205 315q51 50 102 0-51 31-102 0z" fill="#4b2449"/>
+    <path d="M226 326q30 20 60 0" fill="none" stroke="#ff94b8" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="154" cy="290" rx="22" ry="12" fill="#ff89a6" opacity="0.5"/>
+    <ellipse cx="358" cy="290" rx="22" ry="12" fill="#ff89a6" opacity="0.5"/>
+  </g>
+  <path d="M250 451l13-44 13 44 44 13-44 13-13 35-13-35-44-13z" fill="#fff2a8" opacity="0.92"/>
+</svg>
