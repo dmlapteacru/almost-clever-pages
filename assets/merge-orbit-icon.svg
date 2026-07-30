@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Merge Orbit icon</title>
+  <desc id="desc">Three numbered neon spheres orbiting a glowing center.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#090421"/>
+      <stop offset="0.52" stop-color="#21084c"/>
+      <stop offset="1" stop-color="#09031d"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38d8ff"/>
+      <stop offset="0.5" stop-color="#d34dff"/>
+      <stop offset="1" stop-color="#ffb51b"/>
+    </linearGradient>
+    <radialGradient id="one" cx="35%" cy="30%">
+      <stop stop-color="#df65ff"/>
+      <stop offset="1" stop-color="#7811c8"/>
+    </radialGradient>
+    <radialGradient id="two" cx="35%" cy="30%">
+      <stop stop-color="#428dff"/>
+      <stop offset="1" stop-color="#0738cc"/>
+    </radialGradient>
+    <radialGradient id="three" cx="35%" cy="30%">
+      <stop stop-color="#48e6ff"/>
+      <stop offset="1" stop-color="#008fc5"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="13" stdDeviation="11" flood-color="#02000d" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <g fill="#fff" opacity="0.72">
+    <circle cx="78" cy="91" r="2.2"/><circle cx="118" cy="57" r="1.6"/><circle cx="428" cy="88" r="2"/>
+    <circle cx="452" cy="175" r="1.7"/><circle cx="66" cy="258" r="1.8"/><circle cx="401" cy="407" r="2.2"/>
+    <circle cx="111" cy="425" r="1.5"/><circle cx="344" cy="61" r="1.5"/><circle cx="465" cy="339" r="1.6"/>
+  </g>
+  <circle cx="256" cy="273" r="165" fill="none" stroke="#8d39d6" stroke-opacity="0.22" stroke-width="30" filter="url(#glow)"/>
+  <circle cx="256" cy="273" r="165" fill="none" stroke="url(#orbit)" stroke-width="17" stroke-linecap="round"/>
+  <g filter="url(#glow)">
+    <path d="M256 213l12 39 40 11-40 12-12 39-12-39-40-12 40-11z" fill="#ffd52e"/>
+    <circle cx="256" cy="263" r="15" fill="#fff8c5"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="108" r="76" fill="url(#three)" stroke="#dffbff" stroke-width="8"/>
+    <circle cx="110" cy="356" r="74" fill="url(#two)" stroke="#e3f3ff" stroke-width="8"/>
+    <circle cx="402" cy="356" r="74" fill="url(#one)" stroke="#ffe2ff" stroke-width="8"/>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900" text-anchor="middle" dominant-baseline="central" stroke="#21114f" stroke-width="6" paint-order="stroke">
+    <text x="256" y="111">3</text>
+    <text x="110" y="359">2</text>
+    <text x="402" y="359">1</text>
+  </g>
+  <g fill="#f35cff" stroke="#fff" stroke-width="5" filter="url(#glow)">
+    <circle cx="112" cy="158" r="16"/><circle cx="400" cy="159" r="16"/><circle cx="256" cy="438" r="16"/>
+  </g>
+</svg>
