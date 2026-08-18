@@ -7,9 +7,9 @@
   <meta name="theme-color" content="#7A5CFA">
   <meta property="og:title" content="Puff Up! Privacy Policy">
   <meta property="og:description" content="Privacy information for Puff Up! by Almost Clever Games.">
-  <meta property="og:image" content="../assets/almost_clever_games_google_dev_header_4096x2304.jpg">
+  <meta property="og:image" content="../assets/puff-up-icon.png">
   <title>Puff Up! Privacy Policy — Almost Clever Games</title>
-  <link rel="icon" type="image/png" href="../assets/ACG_logo.png">
+  <link rel="icon" type="image/png" href="../assets/puff-up-icon.png">
   <style>
     :root {
       color-scheme: dark;
@@ -76,44 +76,64 @@
     <main>
       <article>
         <div class="title-row">
-          <img class="title-logo" src="../assets/ACG_logo.png" alt="">
+          <img class="title-logo" src="../assets/puff-up-icon.png" alt="Puff Up! app icon">
           <h1>Puff Up! Privacy Policy</h1>
         </div>
-        <p class="meta"><strong>Effective date:</strong> July 30, 2026</p>
+        <p class="meta"><strong>Effective date:</strong> August 18, 2026</p>
 
         <p>This Privacy Policy explains how <strong>Almost Clever Games</strong> handles information in the Android game <strong>Puff Up!</strong>, package name <code>com.almostclever.puffup</code>.</p>
 
-        <h2>Information collection</h2>
-        <p>Puff Up! does not collect, transmit, sell, rent, or share personal information or user data.</p>
-        <p>The game does not require an account and does not include analytics, advertising, attribution, crash-reporting, tracking, remote-configuration, social, or cloud-save services.</p>
+        <h2>Overview</h2>
+        <p>Puff Up! stores game data locally on your device and can use <strong>Google Play Games Services</strong> for player sign-in, leaderboards, and Saved Games cloud synchronization.</p>
+        <p>Core gameplay remains playable without signing in and can be played offline. Online Play Games features require an internet connection.</p>
+        <p>Almost Clever Games does not sell or rent personal information. The current version contains no advertising SDK, no real-money in-app purchase SDK, and no developer-operated third-party analytics service.</p>
 
-        <h2>Local data stored on your device</h2>
-        <p>Puff Up! may store the following game information locally on your device:</p>
+        <h2>Google Play Games Services</h2>
+        <p>When Play Games Services is available and you sign in, Google may process your Play Games gamer identity and service information. Puff Up! may access your Play Games display name and player identifier to show your signed-in state, identify your own leaderboard row, submit scores, load leaderboard results, and read or write your Saved Games data.</p>
+        <p>Leaderboard features may display information supplied by Play Games Services, such as player display names, ranks, and scores. Weekly and all-time leaderboard views are provided through Google Play Games Services.</p>
+        <p>According to Google's Play Games Services data-disclosure documentation, the SDK automatically processes gamer identity information and may collect analytics and diagnostics to improve SDK stability and Google products. Google handles this information under its own terms and privacy policies.</p>
+
+        <h2>Game data stored locally and in Saved Games</h2>
+        <p>Puff Up! stores gameplay and preference data locally on your device. When cloud synchronization is active, a version of that game state may also be stored in Google Play Games Services Saved Games. Depending on the features you use, the saved state can include:</p>
         <ul>
-          <li>sound, haptics, and reduced-motion settings;</li>
-          <li>tutorial completion status;</li>
-          <li>best score and gameplay statistics;</li>
-          <li>local diagnostic information such as the most recent random seed, where enabled by the game.</li>
+          <li>best score, best gate count, weekly best score, and other gameplay statistics;</li>
+          <li>run totals, precision records, and related progress counters;</li>
+          <li>sound, haptics, reduced-motion, and language settings;</li>
+          <li>tutorial-completion state;</li>
+          <li>the currently equipped Puff;</li>
+          <li>earned in-game coins, owned Puffs, and the transaction ledger used to merge wallet state safely across devices.</li>
         </ul>
-        <p>This information remains on your device and is not sent to Almost Clever Games or to third parties.</p>
+        <p>The cloud save is used to synchronize and recover Puff Up! progress across reinstalls or compatible devices signed in to the same Play Games profile.</p>
+
+        <h2>Leaderboards</h2>
+        <p>When you are signed in, Puff Up! can submit your game score to a Google Play Games leaderboard and request leaderboard data from Google. Whether your score or profile appears publicly can depend on your Play Games profile and privacy settings.</p>
+
+        <h2>Local diagnostics and developer telemetry</h2>
+        <p>The game may keep local diagnostic or gameplay information on the device to support game behavior and troubleshooting.</p>
+        <p>The current production build does not send developer-defined gameplay or economy telemetry to a third-party analytics service. Internal economy event interfaces exist in the game code, but the production event sink does not transmit those events over the network.</p>
 
         <h2>Network access</h2>
-        <p>Puff Up! is designed to work offline. The production version does not request the Android Internet permission and does not perform network operations.</p>
+        <p>Puff Up! requests Android internet access for Google Play Games sign-in, leaderboards, and Saved Games synchronization. Core gameplay does not require these online services and remains available when they are unavailable.</p>
 
         <h2>Advertising and purchases</h2>
-        <p>The current version of Puff Up! contains no advertising and no in-app purchases.</p>
+        <p>The current version of Puff Up! contains no advertising SDK and shows no rewarded advertisements. The production rewarded-ad gateway is disabled.</p>
+        <p>The current version also contains no Google Play Billing or other real-money in-app purchase SDK. Puffs acquired with earned in-game coins are game progression purchases, not real-money transactions.</p>
+
+        <h2>Data security</h2>
+        <p>Google states that Play Games Services encrypts collected end-user data in transit using HTTPS. Puff Up! does not intentionally transmit passwords or payment-card information to Almost Clever Games.</p>
+
+        <h2>Data retention and deletion</h2>
+        <p>Local game data remains on the device until it is cleared, removed by the game where applicable, or the application is uninstalled. Clearing local application storage or uninstalling Puff Up! does not necessarily delete an existing Play Games Saved Game, and cloud state may be restored after a later sign-in.</p>
+        <p>Google provides controls for managing or deleting Play Games data through the user's Play Games profile or Google account controls. For help with Puff Up! data or a privacy request, contact Almost Clever Games using the address below.</p>
 
         <h2>Children's privacy</h2>
-        <p>Puff Up! does not collect personal information from anyone, including children. The game has no chat, account creation, location tracking, personalized advertising, or user-generated content.</p>
+        <p>Puff Up! does not provide chat, user-generated content, personalized advertising, or direct account registration with Almost Clever Games. Google Play and Play Games Services account features are governed by Google's account, privacy, and family controls.</p>
 
-        <h2>Deleting local data</h2>
-        <p>You can delete locally stored game data by clearing the application's storage in Android settings or by uninstalling the game.</p>
-
-        <h2>Third-party distribution platforms</h2>
-        <p>Google Play may process information independently when you access, download, install, update, or review the game. That processing is governed by Google's own terms and privacy policies and is not controlled by Puff Up!.</p>
+        <h2>Third-party services</h2>
+        <p>Google processes information when you use Google Play or Google Play Games Services. Google's handling of that information is governed by Google's policies. You can review the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
 
         <h2>Changes to this policy</h2>
-        <p>This policy may be updated if the game's features or data practices change. The effective date at the top of this page will be updated when a revised policy is published.</p>
+        <p>This policy may be updated when Puff Up!'s features, service providers, or data practices change. The effective date at the top of this page will be updated when a revised policy is published.</p>
 
         <h2>Contact</h2>
         <p>For privacy or support questions, contact Almost Clever Games at <a href="mailto:lector3run@gmail.com">lector3run@gmail.com</a>.</p>
