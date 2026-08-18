@@ -8,21 +8,29 @@ Public GitHub Pages website, support contact, game artwork, and privacy policies
 
 ## Games
 
-| Game | Platform | Public page |
+| Game | Platform / services | Public page |
 |---|---|---|
 | ![Merge Orbit icon](assets/merge-orbit-icon.svg) **Merge Orbit** | Android · Offline | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/merge-orbit/privacy-policy.html) |
 | ![Puff Up icon](assets/puff-up-icon.svg) **Puff Up!** | Android · Offline | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/puff-up/privacy-policy.html) |
+| **Lucky Ticket** | Android · Play Games Saved Games · Google Play Billing | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/lucky-ticket/privacy-policy.html) |
 
-Both current games are designed to work offline and do not require accounts, advertising, analytics, or a network connection.
+Merge Orbit and Puff Up! are designed as offline games. Lucky Ticket uses Google Play Games Services for player sign-in and Saved Games cloud synchronization and Google Play Billing for optional in-app purchases. Its current version has no advertising SDK and no developer-operated third-party analytics service.
 
 ## Repository structure
 
 ```text
-index.html                         Main public landing page
-assets/                            Shared branding and game-card artwork
-merge-orbit/privacy-policy.html    Merge Orbit privacy policy
-puff-up/privacy-policy.html        Puff Up! privacy policy
+index.html                          Main public landing page
+assets/                             Shared branding and game-card artwork
+merge-orbit/privacy-policy.html     Merge Orbit privacy policy
+puff-up/privacy-policy.html         Puff Up! privacy policy
+lucky-ticket/privacy-policy.html    Lucky Ticket privacy policy
 ```
+
+## Privacy-policy maintenance
+
+Privacy pages must stay consistent with the corresponding shipped game and Play Console Data safety declarations. Update the relevant policy effective date whenever data handling, platform services, advertising/analytics, purchases, account behavior, or cloud storage changes.
+
+Lucky Ticket currently documents Google Play Games Services, Saved Games and Google Play Billing. If its planned future cross-platform/backend architecture is implemented, this policy must be revised before that data path is shipped.
 
 ## Contact
 
