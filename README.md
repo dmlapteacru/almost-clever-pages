@@ -32,9 +32,16 @@ lucky-ticket/privacy-policy.html    Lucky Ticket privacy policy
 
 Privacy pages must stay consistent with the corresponding shipped game and Play Console Data safety declarations. Update the relevant policy effective date whenever data handling, platform services, advertising/analytics, purchases, account behavior, leaderboards, or cloud storage changes.
 
-Puff Up! currently documents Play Games sign-in, leaderboards and Saved Games. Its code contains seams for future rewarded ads and premium monetization, but the current production build activates neither; the privacy policy and Play Data Safety declarations must be updated before either is enabled.
+The public policy should describe the categories of data handled, why they are used, the relevant service providers, retention/deletion, and security. It should not expose internal implementation algorithms unless they are necessary to explain a user-facing data practice.
 
-Lucky Ticket currently documents Google Play Games Services, Saved Games and Google Play Billing. If its planned future cross-platform/backend architecture is implemented, this policy must be revised before that data path is shipped.
+**Audit baseline — 2026-08-19:**
+
+- Lucky Ticket was checked against `v3-redesign` (version `1.0.0+1`): Google Play Games sign-in/Saved Games and Google Play Billing are active code paths; there is no advertising SDK, separate player-account backend, or developer-operated third-party analytics SDK.
+- Puff Up! was checked against `release/5.0` (version `5.0.0+14`): Google Play Games sign-in, weekly/all-time leaderboards, and Saved Games are active; production has no advertising SDK, no real-money billing integration, and no developer-operated third-party analytics service.
+
+Puff Up! contains code seams for possible future rewarded ads and premium monetization, but the current production build activates neither; the privacy policy and Play Data Safety declarations must be updated before either is enabled.
+
+Lucky Ticket's current architecture stores purchase-related delivery identifiers with its game state so consumable purchases can be delivered safely. The public policy intentionally describes this at the user-data level rather than documenting the internal purchase-delivery algorithm. If the planned future cross-platform/backend architecture is implemented, the policy must be revised before that data path ships.
 
 ## Artwork conventions
 
