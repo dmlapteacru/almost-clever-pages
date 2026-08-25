@@ -11,10 +11,10 @@ Public GitHub Pages website, support contact, game artwork, and privacy policies
 | Game | Platform / services | Public page |
 |---|---|---|
 | ![Merge Orbit icon](assets/merge-orbit-icon.svg) **Merge Orbit** | Android · Offline | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/merge-orbit/privacy-policy.html) |
-| ![Puff Up icon](assets/puff-up-icon.png) **Puff Up!** | Android · Play Games leaderboards · Saved Games | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/puff-up/privacy-policy.html) |
+| ![Puff Up icon](assets/puff-up-icon.png) **Puff Up!** | Android · Play Games leaderboards/Saved Games · optional rewarded ads | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/puff-up/privacy-policy.html) |
 | ![Lucky Ticket icon](assets/lucky-ticket-icon.png) **Lucky Ticket** | Android · Play Games Saved Games · Google Play Billing | [Privacy Policy](https://dmlapteacru.github.io/almost-clever-pages/lucky-ticket/privacy-policy.html) |
 
-Merge Orbit is designed as an offline game. Puff Up! keeps its core gameplay offline-capable but uses Google Play Games Services for player sign-in, weekly/all-time leaderboards, and Saved Games cloud synchronization. Puff Up! currently has no ad SDK, no real-money billing SDK, and no developer-operated third-party analytics service. Lucky Ticket uses Google Play Games Services for player sign-in and Saved Games cloud synchronization and Google Play Billing for optional in-app purchases; its current version has no advertising SDK and no developer-operated third-party analytics service.
+Merge Orbit is designed as an offline game. Puff Up! keeps its core gameplay offline-capable while using Google Play Games Services for optional sign-in, leaderboards and Saved Games cloud synchronization, plus Google Mobile Ads/UMP for an optional post-run rewarded advertisement. Puff Up! has no developer-operated backend, no real-money billing SDK and no developer-operated third-party product analytics service. Lucky Ticket uses Google Play Games Services for player sign-in and Saved Games cloud synchronization and Google Play Billing for optional in-app purchases; its current version has no advertising SDK and no developer-operated third-party analytics service.
 
 ## Repository structure
 
@@ -30,22 +30,23 @@ lucky-ticket/privacy-policy.html    Lucky Ticket privacy policy
 
 ## Privacy-policy maintenance
 
-Privacy pages must stay consistent with the corresponding shipped game and Play Console Data safety declarations. Update the relevant policy effective date whenever data handling, platform services, advertising/analytics, purchases, account behavior, leaderboards, or cloud storage changes.
+Privacy pages must stay consistent with the corresponding shipped game and Play Console Data Safety declarations. Update the relevant policy effective date whenever data handling, platform services, advertising/analytics, purchases, account behavior, leaderboards, or cloud storage changes.
 
 The public policy should describe the categories of data handled, why they are used, the relevant service providers, retention/deletion, and security. It should not expose internal implementation algorithms unless they are necessary to explain a user-facing data practice.
 
-**Audit baseline — 2026-08-19:**
+**Audit baseline — 2026-08-25:**
 
-- Lucky Ticket was checked against `v3-redesign` (version `1.0.0+1`): Google Play Games sign-in/Saved Games and Google Play Billing are active code paths; there is no advertising SDK, separate player-account backend, or developer-operated third-party analytics SDK.
-- Puff Up! was checked against `release/5.0` (version `5.0.0+14`): Google Play Games sign-in, weekly/all-time leaderboards, and Saved Games are active; production has no advertising SDK, no real-money billing integration, and no developer-operated third-party analytics service.
+- Lucky Ticket remains documented according to its current Google Play Games / Billing architecture and has no advertising SDK or developer-operated third-party analytics service.
+- Puff Up! is aligned with the `release/6.0` external-service baseline: Google Play Games optional sign-in, leaderboards and Saved Games are active; Google Mobile Ads/UMP is active for one optional rewarded placement; there is no Puff Up!-operated backend, no real-money billing SDK and no developer-operated third-party product analytics service.
+- Puff Up!'s public privacy policy and Play Data Safety baseline cover Mobile Ads categories including device/other identifiers, IP-derived approximate location, app interactions and diagnostics, plus region-dependent UMP privacy choices.
 
-Puff Up! contains code seams for possible future rewarded ads and premium monetization, but the current production build activates neither; the privacy policy and Play Data Safety declarations must be updated before either is enabled.
+The authoritative internal console/declaration checklist for Puff Up! lives in the game repository at `docs/PLAY_CONSOLE_ADMOB_BASELINE.md`; this public repository should never contradict that baseline or the shipped binary.
 
 Lucky Ticket's current architecture stores purchase-related delivery identifiers with its game state so consumable purchases can be delivered safely. The public policy intentionally describes this at the user-data level rather than documenting the internal purchase-delivery algorithm. If the planned future cross-platform/backend architecture is implemented, the policy must be revised before that data path ships.
 
 ## Artwork conventions
 
-Game-specific public surfaces should use the corresponding game artwork from `assets/` (for example `puff-up-icon.png` for Puff Up! and `lucky-ticket-icon.png` for Lucky Ticket). Almost Clever Games branding such as the site header, publisher logo and shared developer banner continues to use the ACG assets.
+Game-specific public surfaces should use the corresponding game artwork from `assets/` (for example, `puff-up-icon.png` for Puff Up! and `lucky-ticket-icon.png` for Lucky Ticket). Almost Clever Games branding such as the site header, publisher logo and shared developer banner continues to use the ACG assets.
 
 ## Contact
 
