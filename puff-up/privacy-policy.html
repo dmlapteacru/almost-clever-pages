@@ -79,88 +79,103 @@
           <img class="title-logo" src="../assets/puff-up-icon.png" alt="Puff Up! app icon">
           <h1>Puff Up! Privacy Policy</h1>
         </div>
-        <p class="meta"><strong>Effective date:</strong> August 24, 2026</p>
+        <p class="meta"><strong>Effective date:</strong> September 4, 2026</p>
 
         <p>This Privacy Policy explains how <strong>Almost Clever Games</strong> handles information in the Android game <strong>Puff Up!</strong>, package name <code>com.almostclever.puffup</code>.</p>
 
         <h2>Overview</h2>
-        <p>Puff Up! stores game progress and settings on your device. Core gameplay can be played offline and does not require an account. The game also uses <strong>Google Play Games Services</strong> for optional player sign-in, leaderboards, and Saved Games cloud synchronization, and <strong>Google AdMob / Google Mobile Ads</strong> for optional rewarded advertisements.</p>
-        <p>Almost Clever Games does not operate a separate player-account backend for the current version of Puff Up!, does not allow users to create an Almost Clever Games account in the app, and does not sell or rent personal information.</p>
+        <p>Puff Up! can be played without creating or connecting a cloud account. Guest progress is kept in the app's local storage and core gameplay remains available offline.</p>
+        <p>If you choose to connect your Google Play Games account, Puff Up! uses Google Play Games Services and Firebase services operated by Google to identify your game profile, synchronize progress, provide leaderboards, measure app usage, diagnose crashes, and protect the backend from abuse. Puff Up! also uses Google AdMob / Google Mobile Ads for optional rewarded advertisements.</p>
+        <p>Almost Clever Games does not sell or rent personal information and does not operate custom standalone game servers. The cloud services used by Puff Up! are provided by Google and Firebase and are configured for the game by Almost Clever Games.</p>
+
+        <h2>Guest play and connecting an account</h2>
+        <p>You may play Puff Up! as a Guest without connecting an account. Guest progress can include scores, statistics, settings, earned Puff Coins, owned Puffs, and other game progress. Guest progress is not stored in Puff Up!'s Firebase cloud.</p>
+        <p>If you choose <strong>Save Progress</strong> or otherwise connect your account, Puff Up! signs you in through your existing Google Play Games profile and uses Firebase Authentication to create the game identity used by Puff Up!'s cloud services. Your current local game progress may then be associated with that connected profile and synchronized to the cloud.</p>
+        <p>Puff Up! does not ask you to create a separate email/password account and does not receive your Google Account password.</p>
 
         <h2>Google Play Games Services</h2>
-        <p>If you choose to use Play Games Services, you sign in with an existing Google Play Games profile / Google Account created and managed by Google. Google processes your Play Games gamer identity, including a player identifier and, where available, a display name. Puff Up! uses this information for app functionality such as showing signed-in state, identifying your leaderboard entry, submitting scores, loading leaderboard results, and synchronizing game progress.</p>
-        <p>Use of Play Games Services is optional for Puff Up!'s core gameplay. In Google Play's Data Safety terminology, Play Games-related <strong>User IDs</strong> and certain <strong>Other app activity / gameplay actions</strong> may be collected and shared with Google for app functionality when you choose to use these services.</p>
-        <p>The Play Games Services SDK may also process service analytics and diagnostics for Google. Google handles this information under its own terms and privacy policies.</p>
+        <p>When you connect Play Games Services, Google may provide Puff Up! with a Play Games player identifier and, where available, your Play Games display name. Puff Up! uses this information to recognize the account you selected, support account switching, show connected-account state, and provide leaderboard functionality.</p>
+        <p>Older versions of Puff Up! used Google Play Games Saved Games for cloud progress. A 7.0 or later version may read an older Saved Games record to migrate existing progress to the current Puff Up! cloud profile.</p>
 
-        <h2>Leaderboards</h2>
-        <p>Puff Up! can submit scores to Google Play Games Services and display weekly and all-time leaderboard information supplied by Google, including player display names, ranks, and scores. The visibility of Play Games profile and leaderboard information can depend on each player's Google Play Games privacy settings.</p>
-
-        <h2>Game data and cloud saves</h2>
-        <p>Puff Up! stores game data locally. When Play Games cloud synchronization is active, game data is also transmitted to and stored in Google Play Games Services Saved Games. This can include:</p>
+        <h2>Cloud game progress</h2>
+        <p>For a connected player, Puff Up! stores a cloud copy of game progress in Google Firebase / Cloud Firestore. The cloud profile can include:</p>
         <ul>
-          <li>best scores, gameplay records, statistics, and progress counters;</li>
-          <li>sound, haptics, reduced-motion, language, and tutorial settings;</li>
-          <li>the currently equipped Puff;</li>
-          <li>earned in-game coins, owned Puffs, and wallet progress.</li>
+          <li>scores, records, gameplay statistics, play-time and progression counters;</li>
+          <li>earned Puff Coins, wallet history, and owned Puffs;</li>
+          <li>the equipped Puff and account-related game preferences;</li>
+          <li>settings such as sound, haptics, reduced motion, frame-rate preference, language, tutorial state, and leaderboard-name preference.</li>
         </ul>
-        <p>Saved Games is used to synchronize and recover progress across reinstalls or compatible devices signed in to the same Play Games profile.</p>
+        <p>This cloud copy is used to synchronize and recover progress for the same Puff Up! player profile. Puff Up! is designed so that progress belonging to different connected players is kept separate.</p>
+
+        <h2>Leaderboards and display name</h2>
+        <p>Puff Up! provides weekly and all-time leaderboards using Firebase. Leaderboard records can contain your score and, when name display is enabled, the display name supplied by Google Play Games.</p>
+        <p>You can turn off display of your Play Games name from Puff Up!'s settings. Your score may still appear on the leaderboard under a game-generated alias so that leaderboard participation and name visibility remain separate choices.</p>
+
+        <h2>Firebase Analytics</h2>
+        <p>Puff Up! uses Firebase Analytics to understand how the game is used and to improve gameplay, balance, performance, and product decisions. Analytics may include app and session activity, gameplay events and aggregated run information, selected or equipped Puff, app language, and selected game settings.</p>
+        <p>Puff Up! does not intentionally send your email address, Google Account password, authentication tokens, free-form messages, or the contents of your cloud save as Analytics event parameters.</p>
+        <p>Firebase Analytics and its supporting Google services may also process technical information such as app/device information, identifiers, and approximate location derived from network information, subject to Google's service behavior and your applicable device, account, consent, and regional privacy settings.</p>
+
+        <h2>Crash reporting and diagnostics</h2>
+        <p>Puff Up! uses Firebase Crashlytics to diagnose crashes and serious errors. Crash reports may include the exception and stack trace, app version, operating-system version, device model, app state at the time of the error, and Firebase-generated installation identifiers used to group reports and affected installations.</p>
+        <p>Puff Up! does not intentionally attach your Play Games display name, email address, authentication token, Puff Coin balance, cloud-save contents, or advertising identifier to its Crashlytics custom context.</p>
+
+        <h2>App integrity and abuse prevention</h2>
+        <p>Puff Up! uses Firebase App Check with Google Play Integrity on supported Android release builds. These services process app/device integrity signals so Puff Up!'s Firebase services can distinguish legitimate app instances from unauthorized or modified clients and reduce abuse.</p>
+
+        <h2>Downloaded game content</h2>
+        <p>Some Puff character and world packages are downloaded on demand from Google-hosted cloud storage instead of being bundled with the initial installation. Normal network metadata required to deliver those files, such as an IP address and request information, is processed by the hosting service.</p>
 
         <h2>Advertising and rewarded ads</h2>
         <p>Puff Up! uses <strong>Google AdMob / Google Mobile Ads SDK</strong> to provide optional rewarded advertisements. When an eligible rewarded offer is available, you may choose whether to watch an advertisement in exchange for an in-game reward. Normal gameplay rewards do not require watching an advertisement.</p>
         <p>After Google permits ad requests, Puff Up! may initialize the Mobile Ads SDK and preload a rewarded advertisement before you choose to watch it. As a result, the advertising SDK may process technical information even if you do not ultimately open a rewarded advertisement.</p>
-        <p>According to Google's Mobile Ads SDK disclosures, the SDK automatically collects and shares the following categories of information for advertising, analytics, and fraud prevention, security, and compliance:</p>
+        <p>According to Google's Mobile Ads disclosures, the advertising service may process information such as:</p>
         <ul>
-          <li><strong>Approximate location</strong>, inferred from your IP address; Puff Up! does not request Android location permission;</li>
-          <li><strong>App interactions</strong>, such as app launches, taps, and ad or video interactions;</li>
-          <li><strong>Diagnostics</strong>, such as information about app or SDK performance, launch time, hangs, and energy usage;</li>
-          <li><strong>Device or other IDs</strong>, which can include the Android Advertising ID, App Set ID, and other applicable device or account identifiers.</li>
+          <li><strong>Approximate location</strong>, for example when inferred from an IP address; Puff Up! does not request Android location permission;</li>
+          <li><strong>App interactions</strong>, including app and ad/video interactions;</li>
+          <li><strong>Diagnostics and app/device information</strong> used for performance, measurement, security, and fraud prevention;</li>
+          <li><strong>Device or other identifiers</strong>, which can include the Android Advertising ID, App Set ID, and other identifiers available to the advertising stack.</li>
         </ul>
-        <p>This information is transmitted to Google and may be shared by Google with advertising partners or service providers as applicable to ad delivery, measurement, analytics, and fraud prevention. Puff Up! does not send this advertising data to a separate server operated by Almost Clever Games.</p>
+        <p>Google may use or share advertising-related information with advertising partners and service providers as applicable to ad delivery, measurement, analytics, security, and fraud prevention. Almost Clever Games does not sell this information.</p>
 
         <h2>Advertising ID and Android Privacy Sandbox</h2>
         <p>On supported Android devices, Google Mobile Ads may access the Android Advertising ID when it is available. The Advertising ID is controlled by Android and Google Play settings and may be reset, deleted, restricted, or unavailable depending on your device and privacy settings.</p>
         <p>On supported Android versions, Google Mobile Ads may also use Android Privacy Sandbox advertising capabilities, including AdServices advertising identifier access, Attribution Reporting, and Topics, subject to Android, Google, regional, and user privacy controls.</p>
 
         <h2>Consent and privacy choices</h2>
-        <p>Puff Up! uses Google's User Messaging Platform (UMP) consent tools. Privacy requirements and available choices are region-dependent. Where required, including under applicable European privacy rules and applicable U.S. state privacy rules, Google may present a consent or privacy message before Puff Up! requests advertisements.</p>
-        <p>Puff Up! checks whether Google permits ad requests before loading rewarded ads. Where Google requires privacy options to remain available, Puff Up! provides access to those choices from the game's settings. You can also manage relevant Google advertising and account privacy settings through your Google Account and Android device settings.</p>
-        <p>There is no single global consent control inside Puff Up! that disables every category of data processed by Google Mobile Ads for every user, device, and region. Depending on your region, device settings, account state, and privacy choices, Google may provide personalized, non-personalized, or limited advertising, or advertising may be unavailable.</p>
+        <p>Puff Up! uses Google's User Messaging Platform (UMP) consent tools. Privacy requirements and available choices are region-dependent. Where required, including under applicable European privacy rules and applicable U.S. state privacy rules, Google may present a consent or privacy message.</p>
+        <p>Puff Up! checks whether Google permits ad requests before loading rewarded ads. Where Google requires privacy options to remain available, Puff Up! provides access to those choices from the game's settings. You can also manage relevant Google advertising, account, and Android privacy settings through Google's own controls.</p>
+        <p>Depending on your region, device settings, account state, and privacy choices, Google may provide personalized, non-personalized, or limited advertising, or advertising may be unavailable.</p>
 
-        <h2>Data Safety summary</h2>
-        <p>Puff Up!'s Google Play Data Safety declaration reflects the current app and its included Google SDKs. It declares:</p>
-        <ul>
-          <li><strong>User IDs</strong> — collected and shared for app functionality when optional Play Games sign-in is used;</li>
-          <li><strong>Other app activity / gameplay actions</strong> — collected and shared for app functionality when optional Play Games features are used;</li>
-          <li><strong>Approximate location</strong> — collected and shared for advertising or marketing, analytics, and fraud prevention, security, and compliance;</li>
-          <li><strong>App interactions</strong> — collected and shared for advertising or marketing, analytics, and fraud prevention, security, and compliance;</li>
-          <li><strong>Diagnostics</strong> — collected and shared for advertising or marketing, analytics, and fraud prevention, security, and compliance;</li>
-          <li><strong>Device or other IDs</strong> — collected and shared for advertising or marketing, analytics, and fraud prevention, security, and compliance.</li>
-        </ul>
-        <p>Play Games-related User IDs and gameplay activity are optional because core gameplay works without Play Games sign-in. The Mobile Ads categories above are declared as required in the global Data Safety disclosure because their collection is part of the advertising SDK's operation when ad requests are allowed and there is no single opt-out available to every user in every region and on every device.</p>
-
-        <h2>Purchases, financial features, health features, and analytics</h2>
-        <p>The current version of Puff Up! contains no real-money in-app purchase or Google Play Billing integration and provides no financial features. Puffs acquired with earned in-game coins are part of game progression and are not real-money purchases.</p>
-        <p>Puff Up! does not provide health features and is not developed by or on behalf of a government.</p>
-        <p>Puff Up! does not currently use a developer-operated standalone analytics service. Google Mobile Ads and Google Play Games Services may process analytics, diagnostics, identifiers, and platform information as part of providing their respective services.</p>
+        <h2>Android backup</h2>
+        <p>Android may back up local Puff Up! app data as part of your device's Android / Google backup feature when that feature is enabled. This platform backup is controlled by Android and Google and is separate from Puff Up!'s own Firebase cloud profile. A platform backup may restore local game data after a reinstall or while setting up another compatible device.</p>
 
         <h2>Network access</h2>
-        <p>An internet connection is used for Play Games sign-in, leaderboards, Saved Games synchronization, consent and privacy messaging, and loading or displaying rewarded advertisements. Core gameplay remains available when these online services are unavailable.</p>
+        <p>An internet connection can be used for Play Games sign-in, Firebase Authentication, cloud synchronization, leaderboards, Analytics, Crashlytics uploads, app-integrity checks, privacy/consent messaging, downloadable game content, and rewarded advertisements. Core gameplay remains available when these online services are unavailable.</p>
 
         <h2>Data security</h2>
-        <p>User data transmitted by the Google services used by Puff Up! is encrypted in transit using secure protocols such as TLS/HTTPS. Puff Up! does not intentionally send passwords, payment-card details, or other payment credentials to Almost Clever Games.</p>
+        <p>Data transmitted between Puff Up! and the Google/Firebase services it uses is sent using encrypted network connections such as TLS/HTTPS. Access to Puff Up! cloud data is restricted through Firebase authentication and security rules, and release builds use app-integrity checks to reduce unauthorized access.</p>
+        <p>Puff Up! does not intentionally collect payment-card details or Google Account passwords.</p>
 
-        <h2>Data retention and deletion</h2>
-        <p>Local game data remains on your device until it is cleared or the app is uninstalled. Clearing local app storage or uninstalling Puff Up! does not necessarily delete an existing Play Games Saved Game, so cloud progress may be restored after a later sign-in.</p>
-        <p>Puff Up! does not create or manage a developer-operated user account and therefore does not provide an Almost Clever Games account-deletion request flow. Google provides controls for deleting Play Games data, including data associated with an individual game, through Play Games or Google Account controls. Advertising information processed by Google is subject to Google's retention practices and the privacy controls available through Google, Android, and applicable consent interfaces.</p>
+        <h2 id="delete-account">Data retention and account deletion</h2>
+        <p>Local game data can remain on your device until it is cleared, overwritten, or the app is uninstalled. Android backup may also retain and later restore local app data according to your device and Google backup settings.</p>
+        <p>If you have connected a Puff Up! cloud profile, you can delete that Puff Up! account from <strong>Settings → Account → Delete Account</strong>. The deletion flow removes the Firebase Authentication account used by Puff Up!, the Puff Up! cloud progress associated with it, and the Puff Up! leaderboard data controlled by Almost Clever Games.</p>
+        <p><strong>Deleting the Puff Up! cloud account does not erase the offline game that is already stored on your phone.</strong> This is intentional so that deleting a cloud account does not destroy local gameplay progress. After deletion, automatic cloud synchronization is disabled. If you later deliberately connect an account again, the local game may be associated with a new Puff Up! cloud profile.</p>
+        <p>Deleting a Puff Up! cloud account does not delete your Google Account or Google Play Games profile. Data processed independently by Google services, including advertising, analytics, crash-reporting, integrity, platform-backup, and Play Games service data, is subject to Google's own retention rules and privacy controls.</p>
+        <p>If you no longer have access to the app and want to request deletion of a Puff Up! cloud account or cloud data, contact Almost Clever Games at <a href="mailto:lector3run@gmail.com?subject=Puff%20Up%20account%20deletion">lector3run@gmail.com</a> with the subject <strong>Puff Up account deletion</strong>. We may ask for information necessary to identify the Puff Up! profile before processing the request.</p>
+
+        <h2>Purchases and financial features</h2>
+        <p>The current version of Puff Up! contains no real-money in-app purchase or Google Play Billing integration and provides no financial features. Puffs acquired with earned in-game coins are part of game progression and are not real-money purchases.</p>
 
         <h2>Children's privacy</h2>
-        <p>Puff Up!'s Google Play target audience is users aged <strong>13 and over</strong> (13–15, 16–17, and 18+). The game is not intended for children under 13 and is not enrolled as a child-directed app. Puff Up! does not provide chat, user-generated social content, or direct account registration with Almost Clever Games. Google Play, Play Games Services, and Google Mobile Ads features are also governed by Google's account, privacy, advertising, and family controls.</p>
+        <p>Puff Up!'s Google Play target audience is users aged <strong>13 and over</strong> (13–15, 16–17, and 18+). The game is not intended for children under 13 and is not enrolled as a child-directed app. Puff Up! does not provide chat or user-generated social content.</p>
 
         <h2>Third-party services</h2>
-        <p>Google processes information when you use Google Play, Google Play Games Services, Google AdMob / Google Mobile Ads, Android advertising services, and related consent services. Google's handling of that information is governed by Google's policies.</p>
+        <p>Google processes information when Puff Up! uses Google Play Games Services, Firebase Authentication, Cloud Firestore, Firebase Analytics, Firebase Crashlytics, Firebase App Check / Google Play Integrity, Google-hosted cloud storage, Google AdMob / Google Mobile Ads, Android advertising services, Android backup, and related privacy/consent services. Google's handling of information through those services is also governed by Google's policies and service-specific terms.</p>
         <ul>
           <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
           <li><a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a></li>
+          <li><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase privacy and security information</a></li>
         </ul>
 
         <h2>Changes to this policy</h2>
